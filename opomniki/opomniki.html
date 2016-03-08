@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="stili.css">
+	<script src="skripta.js"></script>
     <title>..:: Opomniki ::..</title>
     <meta charset="UTF-8">    
 </head>
@@ -48,6 +50,15 @@ Pozdravljeni, <span id="uporabnik"></span>!
 		<img src="fri.png" />
 	</center>
 </noga>
-
+<script>
+	var prijavi = function(dogodek) {
+			var user = document.querySelector("#uporabnisko_ime").value;
+			console.log(user);
+			document.querySelector("#uporabnik").innerHTML = user;
+			document.querySelector(".pokrivalo").style.visibility = "hidden";
+		}
+	document.querySelector("#prijavniGumb").addEventListener('click', prijavi);
+	
+</script>
 </body>
 </html>
