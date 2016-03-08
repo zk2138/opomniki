@@ -26,8 +26,8 @@ Pozdravljeni, <span id="uporabnik"></span>!
 </glava>
 
 <!-- TELO -->
-<telo id="opomniki">
-
+<telo id="opomniki" class="rob senca">
+	
 </telo>
 
 <!-- NOGA -->
@@ -56,15 +56,16 @@ Pozdravljeni, <span id="uporabnik"></span>!
 			document.querySelector("#uporabnik").innerHTML = user;
 			document.querySelector(".pokrivalo").style.visibility = "hidden";
 		}
-	document.querySelector("#prijavniGumb").addEventListener('click', prijavi);
+	document.querySelector("#prijavniGumb").addEventListener('click', prijavi)
 	
-	var dodajOpomnik = function(dogodek) {
+	
+var dodajOpomnik = function(dogodek) {
 			var naziv = document.querySelector("#naziv_opomnika").value;
 			var cas = document.querySelector("#cas_opomnika").value;
 			document.querySelector("#naziv_opomnika").value = "";
 			document.querySelector("#cas_opomnika").value = "";
 			
-			document.getElementById("opomniki").innerHTML = "<div class='opomnik'>\n\
+			document.getElementById("opomniki").innerHTML += "<div class='opomnik rob senca'>\n\
             <div class='naziv_opomnika'>" + naziv + "</div>\n\
             <div class='cas_opomnika'> Opomnik čez <span>" + cas + "</span> sekund.</div>\n\
 			</div>";
